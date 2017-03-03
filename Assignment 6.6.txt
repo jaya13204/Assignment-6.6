@@ -1,0 +1,68 @@
+1. Explain the difference between FIFO and Capacity scheduler
+
+*FIFO Scheduler:
+
+-->A FIFO Scheduler places the applications in a queue and runs them in the order in
+ which they were submitted.
+
+-->In FIFO ,requests for the first application in the queue are allocated first and served.Then the
+ second application is served and so on.
+
+-->The FIFO scheduler is simple to understand and doesnot need any configurations.
+
+-->The FIFO scheduler has no concept of  priority or size of the job.
+
+
+*Capacity Scheduler:
+
+-->In capacity scheduler a seperate dedicated queue allows the small job to start as soon 
+as it is submitted.
+
+-->The shortest job are assigned and served first followed by the longest one.
+
+-->Capacity scheduler is  most complex and users need know the 
+system well to set up configurations.
+
+-->If we are using a large Hadoop cluster, with multiple clients,different types and
+ priorities of jobs,then the capacity scheduler will be the valid choice.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. What are the limitations of hadoop 1.x and how they were overcome in hadoop 2.x
+
+--Limitation of Hadoop 1.x:
+
+*It supports only one name node and one namespace per cluster.
+
+*It doesnot support microsoft windows.
+
+*It has  the limitation to serve as platform for event processing, streaming and real time operations.
+
+*It has limited scaling of nodes which is limited to 4000 nodes per cluster
+
+*It has single-point-of-failure because of the single namenode.It requires manual intervention to overcome single
+point failure in namenode.
+
+*The namenode failure affects the stack.
+
+
+--Limitations overcomed by hadoop 2.x:
+
+*It supports multiple namenode servers which  manages multiple namespace.
+
+*It is added with additional features to support microsoft windows.
+
+*It can  serve as a platform for a wide variety of data analytics,making possible to
+ run event processing, streaming and real time operation.
+
+*It has better scalability and which can scale up to 10000 nodes per cluster
+
+*It has many advanced features to overcome Single-Point-Of-Failure with a standby Namenode
+ and it is configured for automatic recovery in case of namenode failure.
+
+*Hadoop 2.x handles namenode failure using Hive,Pig etc..,
+
+
+
+
+
+ 
